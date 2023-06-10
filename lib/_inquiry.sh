@@ -201,7 +201,7 @@ software_dominio() {
 inquiry_options() {
   
   print_banner
-  printf "${WHITE} 💻 Bem vindo(a) ao Gerenciador Whaticket, Selecione abaixo a proxima ação!${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Bem vindo(a) ao Gerenciador PLW DESIGN, Selecione abaixo a proxima ação!${GRAY_LIGHT}"
   printf "\n\n"
   printf "   [0] Instalar whaticket\n"
   printf "   [1] Atualizar whaticket\n"
