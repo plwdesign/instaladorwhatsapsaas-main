@@ -48,13 +48,17 @@ backend_set_env() {
   backend_url=${backend_url%%/*}
   backend_url=https://$backend_url
 
-  # ensure idempotency
+  # ensure idempotency 
   frontend_url=$(echo "${frontend_url/https:\/\/}")
   frontend_url=${frontend_url%%/*}
   frontend_url=https://$frontend_url
 
 sudo su - deploy << EOF
   cat <<[-]EOF > /home/deploy/${instancia_add}/backend/.env
+
+//PLW DESIGN//
+//plwdesign.online//
+  
 NODE_ENV=
 BACKEND_URL=${backend_url}
 FRONTEND_URL=${frontend_url}
@@ -78,6 +82,19 @@ REGIS_OPT_LIMITER_DURATION=3000
 USER_LIMIT=${max_user}
 CONNECTIONS_LIMIT=${max_whats}
 CLOSED_SEND_BY_ME=true
+
+GERENCIANET_SANDBOX=false
+GERENCIANET_CLIENT_ID=Client_Id_Gerencianet
+GERENCIANET_CLIENT_SECRET=Client_Secret_Gerencianet
+GERENCIANET_PIX_CERT=certificado-Gerencianet
+GERENCIANET_PIX_KEY=chave pix gerencianet
+
+# EMAIL
+ MAIL_HOST="smtp.hostinger.com"
+ MAIL_USER="seusite@email.com"
+ MAIL_PASS="SuaSenha"
+ MAIL_FROM="seusite@email.com"
+ MAIL_PORT="465"
 
 [-]EOF
 EOF
