@@ -79,6 +79,12 @@ USER_LIMIT=${max_user}
 CONNECTIONS_LIMIT=${max_whats}
 CLOSED_SEND_BY_ME=true
 
+MAIL_HOST="smtp.hostinger.com"
+MAIL_USER="contato@seusite.com"
+MAIL_PASS="senha"
+MAIL_FROM="Recuperar Senha <contato@seusite.com>"
+MAIL_PORT="465"
+
 [-]EOF
 EOF
 
