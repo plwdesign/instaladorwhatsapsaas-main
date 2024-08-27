@@ -105,7 +105,10 @@ backend_node_dependencies() {
 
   sudo su - deploy <<EOF
   cd /home/deploy/${instancia_add}/backend
+  
   npm install
+  pm2 start ecosystem.config.js
+  pm2 save
 EOF
 
   sleep 2
