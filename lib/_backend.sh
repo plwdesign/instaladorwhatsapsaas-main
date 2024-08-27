@@ -221,6 +221,7 @@ backend_start_pm2() {
 
   sudo su - deploy <<EOF
   cd /home/deploy/${instancia_add}/backend
+  pm2 start dist/server.js --name ${instancia_add}-backend
 EOF
 
   sleep 2
